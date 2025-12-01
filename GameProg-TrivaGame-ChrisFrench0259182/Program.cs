@@ -15,11 +15,17 @@ namespace GameProg_TrivaGame_ChrisFrench0259182
         static string[] questions;// =new string[1];
         static string[] answers;// =new string[];
         //static List <string, string> Trivia = new List<Question, Answer>;
-        static string Answer = Console.ReadLine();
-
+        static int Ans;
+        static string alias;
+        static int score = 0;
         static void Main(string[] args)
         {
-            hud();
+           
+                Console.WriteLine("What is your name?");
+                 alias = Console.ReadLine();
+            Console.Clear();
+
+                hud();
             Quizit();
 
            // answerstest();
@@ -34,32 +40,51 @@ namespace GameProg_TrivaGame_ChrisFrench0259182
                 answers = File.ReadAllLines(filepathA);
 
 
-
-
-                //for (string Question in questions = new String[10])
-                //    {
-                //    for (string Answer in answers = new String[10])
-                //        {
-                //        Console.WriteLine(Question[0]+Answer[0]);
-
-
-                //        }
-
-                //    }
-
-
-                for (int i=0; i< questions.Length; i++)
+                for (int i = 0; i < questions.Length; i++)
                 {
                     Console.WriteLine($"{questions[i]} \n{answers[i]}");
-                    Console.WriteLine(" What is the correct answer? ");
-                    string Answer = Console.Readline(); 
 
+                    Console.WriteLine(" What is the correct answer? ");
+                    Ans = Convert.ToInt32(Console.Read());
+
+
+                    if (Ans == 3)
+                    {
+                        Console.WriteLine(" That is correct ");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine(" Sorry that is incorrect please try again. ");
+                    }
+                    Console.Clear();
+                    Console.WriteLine(" Please press any key to get next question. ");
+                    Console.ReadKey(true);
 
                 }
 
+            }
 
 
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"Error: The file '{filepathQ}' was not found.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
 
+                //m2
+
+                static void hud()
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Name : {alias}");
+                    Console.WriteLine($"Score : {score}");
+
+                }
 
 
 
@@ -82,45 +107,8 @@ namespace GameProg_TrivaGame_ChrisFrench0259182
                 //}
             }
 
-            catch (FileNotFoundException)
-            {
-                Console.WriteLine($"Error: The file '{filepathQ}' was not found.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
+          
 
         }
 
 
-        //static void answerstest()
-        //{
-        //    Directory.GetCurrentDirectory();
-        //    try
-        //    {
-                  //answers = File.ReadAllLines(filepathA);
-
-                  //foreach (string Answer in answers)
-        //        {
-        //            Console.WriteLine(Answer);
-        //            //foreach (string Ans in Answer)
-        //            //{
-        //            //    Console.WriteLine(Ans);
-        //            //}
-        //        }
-        //    }
-
-        //    catch (FileNotFoundException)
-        //    {
-        //        Console.WriteLine($"Error: The file '{filepathA}' was not found.");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"An error occurred: {ex.Message}");
-        //    }
-
-        //}
-
-    }
-}
