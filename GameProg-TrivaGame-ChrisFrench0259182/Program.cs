@@ -29,6 +29,7 @@ namespace GameProg_TrivaGame_ChrisFrench0259182
           
             Quizit();
 
+            WinLoss();
 
             Console.ReadKey(true);
           
@@ -89,6 +90,29 @@ namespace GameProg_TrivaGame_ChrisFrench0259182
             Console.Clear();
             Console.WriteLine($"Name : {alias}");
             Console.WriteLine($"Score : {score}");
+
+        }
+
+        //m3
+
+        static void WinLoss()
+        {
+
+            if(score==10)
+            {
+                Console.WriteLine(" As you see all answers were 3... a,b...C, you're pretty Sharp.  ");
+            }
+            else if (score <=9 && score >=6)
+            {
+                Console.WriteLine(" Not bad you know your stuff... good job. ");
+            }
+            else
+            {
+                Console.WriteLine(" There is room for improvement here...");
+            }
+
+
+
 
         }
 
