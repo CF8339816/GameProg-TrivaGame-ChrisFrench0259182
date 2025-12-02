@@ -1,0 +1,10 @@
+1- @@,  2- ||,   3- &&,   4-$$  
+1- Editable,  2- Edible,  3- Static once created,   4-Dynamic once created  
+1- Lurch,  2- Larp,   3- Slurp,   4- Slip
+1- Read.File,  2- file.Read,  3- File.Read,   4- read.File  
+1- Console.ReadKey(clear), 2- Console.ReadKey("   "),  3- Console.ReadKey(true),   4- Console.ReadKey(false)  
+1- System.Int32.MaxNumber,  2- System.Int32.MaximumValue,  3- System.Int32.MaxValue,   4  System.Int32.Largest 
+1- 1,342,420,356,256,  2- 1080 x 720,  3- 2,147,483,647,   4- 256  
+1- Sam,  2- Michael,  3- Simon,   4- Reddit forms
+1- communal,  2- [SeralizeField],  3- public,   4- universal  
+1- only if you use {},  2- only if you use ##,  3- only if you use ||,   4- only if you use ^^ 
